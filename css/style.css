@@ -376,6 +376,12 @@ display: block;
     grid-area: cajaZonas;
 }
 
+h4{
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 1.2rem;
+}
+
 @media screen and (min-width:1024px)
 {
     .mainSyE{
