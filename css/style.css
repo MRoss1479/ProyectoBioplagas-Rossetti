@@ -1,0 +1,498 @@
+/*RESET*/
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/*ESTILOS HOME*/
+
+body{
+    background: rgb(61,237,60);
+    background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
+    height: 225vh;
+    width: 100%;
+}
+
+header{
+    text-decoration: none;
+  
+}
+
+.cajaHeader{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black
+}
+
+.mascara{
+    width: 10vh;
+}
+
+h1{
+    margin: 0.5rem;
+    color: whitesmoke;
+    font-size: 4rem;
+    font-weight: 100px;
+    font-family: 'Fredoka One', cursive;
+    font-style: italic;
+    text-align: center;
+    
+}
+
+
+.menu{
+    text-align: center;
+    
+}
+
+.barra{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+   
+}
+
+
+.menu ul li{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: Lucida Sans;
+    font-size: 14px;
+    
+}
+.menu ul li:hover{
+    background-color: rgb(205, 205, 211);
+    font-weight: 500;
+
+}
+
+
+a{
+    color: rgb(79, 67, 146);
+    text-decoration: none;
+}
+
+    
+.imagen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img1{
+    height: 50vh;
+    display: block;
+}
+
+.cajaMain{
+    display: grid;
+    justify-content: center;
+}
+
+.eco{
+    background-color: antiquewhite;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    height: 30vh;
+    width: 60vh;
+    border: 3px solid green;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Trebuchet';
+    font-size: 1.2rem;
+
+}
+
+.imgEco{
+    width: 6vh;
+}
+
+.mip{
+    background-color: antiquewhite;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    height: 30vh;
+    width: 60vh;
+    border: 3px solid green;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Trebuchet';
+    font-size: 1.2rem;
+}
+
+.imgMip{
+    width: 6vh;
+}
+
+.tecno{
+    background-color: antiquewhite;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    height: 30vh;
+    width: 60vh;
+    border: 3px solid green;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Trebuchet';
+    font-size: 1.2rem;
+}
+
+.imgTecno{
+    width: 6vh;
+}
+
+.salud{
+    background-color: antiquewhite;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    height: 30vh;
+    width: 60vh;
+    border: 3px solid green;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Trebuchet';
+    font-size: 1.2rem;
+}
+
+.imgEsc{
+    width: 6vh;
+}
+   
+.pie{
+    margin: 0.4rem;
+    color: rgb(79, 67, 146);
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    grid-area: footer;
+}
+
+@media screen and (min-width:600px) {
+
+    body{
+        height: 180vh;
+    }
+    .cajaMain{
+        grid-template-areas:"eco mip"
+                            "tecno salud";
+    }
+    .eco{
+        height: 40vh;
+        width: 45vh;
+        grid-area: eco;
+    }
+    .mip{
+        height: 40vh;
+        width: 45vh;
+        grid-area: mip;
+    }
+    .tecno{
+        height: 40vh;
+        width: 45vh;
+        grid-area: tecno;
+    }
+    .salud{
+        height: 40vh;
+        width: 45vh;
+        grid-area: salud;
+    }
+}
+
+@media screen and (min-width:1024px)
+{
+    body{
+        height: 150vh;
+    }
+    .cajaMain{
+        grid-template-areas: "eco mip tecno salud";
+    }
+
+    .eco{
+        height: 50vh;
+        width: 38vh;
+        grid-area: eco;
+    }
+    .mip{
+        height: 50vh;
+        width: 38vh;
+        grid-area: mip;
+    }
+    .tecno{
+        height: 50vh;
+        width: 38vh;
+        grid-area: tecno;
+    }
+    .salud{
+        height: 50vh;
+        width: 38vh;
+        grid-area: salud;
+    }
+    
+}
+    
+
+
+/*EStilos de html QUIENES SOMOS*/
+
+
+
+.qsTitulo{
+    text-align: center;
+    font-size: 3rem;   
+}
+
+.qsSubt{
+    color: rgb(61, 29, 240);
+    text-align: center;
+    font-family: Trebuchet MS;
+    font-size: 1.6rem;
+    margin: 1rem;
+}
+.qsMain{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "qsP"
+                         "cajaImg"
+                         "descImg";
+}
+
+.qsP{
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: antiquewhite;
+    font-family: Trebuchet MS;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 3px solid green;
+    border-radius: 12px;
+    width: 80vh;
+    grid-area: qsP;
+    }
+
+h3{color: rgb(61, 29, 240);
+    margin: 20px;
+    font-weight: 12px;
+    text-align: center;
+    grid-area: descImg;
+}
+.cajaImg{
+    width: 85vh;
+    grid-area: cajaImg;
+}
+.img2{
+width: 75vh;
+height: auto;
+margin: auto;
+display: block;
+}
+
+@media screen and (min-width:1024px) 
+{
+    .qsMain{
+        grid-template-columns: 0,6fr 0,4fr;
+        grid-template-rows: 0,8fr 0,2fr;
+        grid-template-areas: "qsP cajaImg"
+                             "qsP descImg";
+    }
+    
+}
+ 
+
+
+/*Estilos de html Servicios y Espacios*/
+
+.mainSyE{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "cajaServ"
+                         "cajaEsp"
+                         "cajaZonas";
+}
+
+.cajaServ{
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: antiquewhite;
+    font-family: Trebuchet MS;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 3px solid green;
+    border-radius: 12px;
+    width: 80vh;
+    grid-area: cajaServ;
+}
+
+.h1Serv{
+    font-family: Cochin;
+    font-size: 3rem;
+    margin: 10px;
+    padding: 10px;
+    color: rgb(235, 234, 241);
+}
+
+.cajaEsp{
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: antiquewhite;
+    font-family: Trebuchet MS;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 3px solid green;
+    border-radius: 12px;
+    width: 80vh;
+    grid-area: cajaEsp;
+}
+
+.h2SyE{
+    color: rgb(86, 86, 94);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.ulSyE{
+    color: rgb(61, 29, 240);
+    margin: 20px;
+    padding: 25px;
+    font-family: Trebuchet MS;
+    font-size: 18px;
+}
+
+.cajaZonas{
+    margin: 1rem;
+    padding: 0.8rem;
+    background-color: antiquewhite;
+    font-family: Trebuchet MS;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 3px solid green;
+    border-radius: 12px;
+    width: 80vh;
+    grid-area: cajaZonas;
+}
+
+@media screen and (min-width:1024px)
+{
+    .mainSyE{
+    grid-template-columns: 0,5fr 0,5fr;
+    grid-template-rows: 0,7fr 0,3fr;
+    grid-template-areas:"cajaServ cajaEsp"
+                        "cajaZonas cajaZonas";
+    }    
+    .cajaZonas{
+        width: auto;
+    }                  
+}
+    
+/*Estilos de Nuestros Trabajos*/
+
+.cajaNt{
+    background: rgb(61,237,60);
+    background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
+
+}
+.h1Nt{
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+.imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.img4{
+    flex-wrap: wrap;
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+.img5{
+    flex-wrap: wrap;
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+.img6{
+    flex-wrap: wrap;
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+.img7{
+    flex-wrap: wrap;
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+}
+
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+    
+.vd1{
+    margin: 10px;
+    padding: 10px;  
+}
+
+.vd2{
+    margin: 10px;
+    padding: 10px;
+
+}
+
+
+/*ESTILOS de html Contacto*/
+
+.cajaCont{
+    background: rgb(61,237,60);
+    background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
+}
+
+.h1Contacto{
+    font-family: Calibri;
+    font-size: 42px;
+    margin: 20px;
+}
+
+form{
+    color: rgb(61, 29, 240);
+    font-size: 22px;
+}
+
+fieldset{
+    margin: 20px;
+    padding: 22px;
+}
+
+.nombre{
+    margin: 15px;
+}
+
+.tel{
+    margin: 15px;
+}
+
+.ubi{
+    margin: 15px;
+}
+
+.envRes{
+    margin: 15px;
+}
+
+
+
+
+
+
+
+
