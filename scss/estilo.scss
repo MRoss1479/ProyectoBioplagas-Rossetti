@@ -1,0 +1,169 @@
+/*RESET*/
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    @import "base/variables";
+    @import "base/mixins";
+    @import "base/extend";
+    
+
+    /* Estilo Index */
+
+    body{
+        .cajaGral{ 
+            @extend %cajaGral;
+            header{
+                .cajaHeader{
+                    text-decoration: none;
+                    border: 2px solid black;
+                    display: flex;
+                    justify-content: center;
+                    .mascara{
+                        width: 6%;
+                    }
+                    .titulo{
+                        margin: 0.5rem;
+                        color: $color-secundario;
+                        font-size: 4rem;
+                        -webkit-text-stroke: 0.1px whitesmoke;
+                        font-weight: 100px;
+                        font-family: 'Fredoka One', cursive;
+                        font-style: italic;
+                        text-align: center;
+                    }
+                }
+                .menu{
+                    padding: 0.2rem;
+                    .barra{
+                        display: flex;
+                        justify-content: space-evenly;
+                        margin: 0.3rem;
+                        li{
+                            list-style-type: none;
+                            margin: 0.5rem;
+                            padding: 0.5rem;
+                            font-family: $font-principal;
+                            font-size: 1.2rem;
+                            font-weight: 400;
+                            a{
+                            color: $color-principal;
+                            text-decoration: none;
+                            transform: scale(1.1);
+                            }
+
+                            :hover{
+                                border: 2px solid $color-secundario;
+                                transition: all .4s ease-in-out;
+                                
+                            }
+                        }
+
+                    }
+
+                }
+            }
+            main{
+                .imagen{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .img1{
+                        height: 50vh;
+                        display: block;
+                    }
+                }
+                .cajaMain{
+                    @include grid;
+                    .eco{
+                        @extend %cajitas;
+                        @include medidas (60vh, 30vh);
+                        .imgEco{
+                            width: $medida-logo;
+                        }
+                    }
+                    .mip{
+                        @extend %cajitas;
+                        @include medidas (60vh, 30vh);
+                        .imgMip{
+                            width: $medida-logo;
+                        }
+                    }
+                    .tecno{
+                        @extend %cajitas;
+                        @include medidas (60vh, 30vh);
+                        .imgTecno{
+                            width: $medida-logo;
+                        }
+                    }
+                    .salud{
+                        @extend %cajitas;
+                        @include medidas (60vh, 30vh);
+                        .imgEsc{
+                            width: $medida-logo;
+                        }
+                    }
+                }
+
+            }
+            footer{
+                .pie{
+                    margin: 0.4rem;
+                    color: $color-principal;
+                    text-align: center;
+                    padding: 0.3rem;
+                    font-size: 1rem;
+                    grid-area: footer;
+                }
+            }
+       }
+    }
+
+
+@media screen and (min-width:600px) {
+    .cajaMain{
+        grid-template-areas: "eco mip"
+                             "tecno salud";
+                            
+        .eco{
+            @include medidas (45vh, 40vh);
+            grid-area: eco;
+            }
+        .mip{
+            @include medidas (45vh, 40vh);
+            grid-area: mip;
+        }
+        .tecno{
+            @include medidas (45vh, 40vh);
+            grid-area: tecno;
+        }
+        .salud{
+            @include medidas (45vh, 40vh);
+            grid-area: salud;
+        }
+    }
+}
+
+@media screen and (min-width:1020px){
+    .cajaMain{
+        grid-template-areas: "eco mip tecno salud";
+
+        .eco{
+            @include medidas (38vh, 50vh);
+            grid-area: eco;
+            }
+        .mip{
+            @include medidas (38vh, 50vh);
+            grid-area: mip;
+        }
+        .tecno{
+            @include medidas (38vh, 50vh);
+            grid-area: tecno;
+        }
+        .salud{
+            @include medidas (38vh, 50vh);
+            grid-area: salud;
+        }
+    }
+}

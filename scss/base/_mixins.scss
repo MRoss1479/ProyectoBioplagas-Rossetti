@@ -1,0 +1,12 @@
+//mixins
+
+@mixin grid {
+    display: grid;
+    justify-content: center;   
+}
+
+@mixin medidas ($width,$height){
+    width: $width;
+    height: $height;
+}
+

@@ -1,0 +1,20 @@
+//extend
+
+%cajaGral {
+    background: rgb(61,237,60);
+        background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
+        width: 100%;
+        height: auto;
+}
+
+%cajitas {
+    background-color: $color-secundario;
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    border: 3px solid $color-terciario;
+    border-radius: 1rem;
+    text-align: center;
+    font-family: $font-principal;
+    font-size: 1.2rem;
+}

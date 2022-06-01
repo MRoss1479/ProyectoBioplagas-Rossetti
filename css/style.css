@@ -1,465 +1,141 @@
 /*RESET*/
-*{margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-/*ESTILOS HOME*/
+body .cajaGral {
+  background: #3ded3c;
+  background: linear-gradient(0deg, #3ded3c 0%, #48d9ec 100%);
+  width: 100%;
+  height: auto; }
 
-body{
-    background: rgb(61,237,60);
-    background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
-    height: 225vh;
-    width: 100%;
-}
+body .cajaGral main .cajaMain .eco, body .cajaGral main .cajaMain .mip, body .cajaGral main .cajaMain .tecno, body .cajaGral main .cajaMain .salud {
+  background-color: #9aecc3;
+  margin: 1rem;
+  padding: 1rem;
+  display: block;
+  border: 3px solid #4a9b4a;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: "Trebuchet";
+  font-size: 1.2rem; }
 
-header{
-    text-decoration: none;
-  
-}
-
-.cajaHeader{
-    display: flex;
-    justify-content: center;
-    border: 2px solid black
-}
-
-.mascara{
-    width: 6%;
-}
-
-
-
-h1{
+/* Estilo Index */
+body .cajaGral header .cajaHeader {
+  text-decoration: none;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center; }
+  body .cajaGral header .cajaHeader .mascara {
+    width: 6%; }
+  body .cajaGral header .cajaHeader .titulo {
     margin: 0.5rem;
-    color: whitesmoke;
+    color: #9aecc3;
     font-size: 4rem;
+    -webkit-text-stroke: 0.1px whitesmoke;
     font-weight: 100px;
     font-family: 'Fredoka One', cursive;
     font-style: italic;
-    text-align: center;
-}
+    text-align: center; }
 
-.menu{
-padding: 0.2rem;
-}
-  
-
-.barra{
+body .cajaGral header .menu {
+  padding: 0.2rem; }
+  body .cajaGral header .menu .barra {
     display: flex;
     justify-content: space-evenly;
-    margin: 5px; 
-}
+    margin: 0.3rem; }
+    body .cajaGral header .menu .barra li {
+      list-style-type: none;
+      margin: 0.5rem;
+      padding: 0.5rem;
+      font-family: "Trebuchet";
+      font-size: 1.2rem;
+      font-weight: 400; }
+      body .cajaGral header .menu .barra li a {
+        color: #4f4392;
+        text-decoration: none;
+        transform: scale(1.1); }
+      body .cajaGral header .menu .barra li :hover {
+        border: 2px solid #9aecc3;
+        transition: all .4s ease-in-out; }
 
-
-.menu ul li{
-    list-style-type: none;
-    text-decoration: none;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-family: Lucida Sans;
-    font-size: 14px;
-    
-}
-.menu ul li:hover{
-    border: 2px solid rgb(204, 231, 236);
-    font-weight: 400;
-
-}
-
-
-a{
-    color: rgb(79, 67, 146);
-    text-decoration: none;
-}
-
-    
-.imagen{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.img1{
+body .cajaGral main .imagen {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+  body .cajaGral main .imagen .img1 {
     height: 50vh;
-    display: block;
-}
+    display: block; }
 
-.cajaMain{
-    display: grid;
-    justify-content: center;
-}
-
-.eco{
-    background-color: antiquewhite;
-    margin: 1rem;
-    padding: 1rem;
-    display: block;
-    height: 30vh;
+body .cajaGral main .cajaMain {
+  display: grid;
+  justify-content: center; }
+  body .cajaGral main .cajaMain .eco {
     width: 60vh;
-    border: 3px solid green;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Trebuchet';
-    font-size: 1.2rem;
-
-}
-
-.imgEco{
-    width: 6vh;
-}
-
-.mip{
-    background-color: antiquewhite;
-    margin: 1rem;
-    padding: 1rem;
-    display: block;
-    height: 30vh;
+    height: 30vh; }
+    body .cajaGral main .cajaMain .eco .imgEco {
+      width: 6vh; }
+  body .cajaGral main .cajaMain .mip {
     width: 60vh;
-    border: 3px solid green;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Trebuchet';
-    font-size: 1.2rem;
-}
-
-.imgMip{
-    width: 6vh;
-}
-
-.tecno{
-    background-color: antiquewhite;
-    margin: 1rem;
-    padding: 1rem;
-    display: block;
-    height: 30vh;
+    height: 30vh; }
+    body .cajaGral main .cajaMain .mip .imgMip {
+      width: 6vh; }
+  body .cajaGral main .cajaMain .tecno {
     width: 60vh;
-    border: 3px solid green;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Trebuchet';
-    font-size: 1.2rem;
-}
-
-.imgTecno{
-    width: 6vh;
-}
-
-.salud{
-    background-color: antiquewhite;
-    margin: 1rem;
-    padding: 1rem;
-    display: block;
-    height: 30vh;
+    height: 30vh; }
+    body .cajaGral main .cajaMain .tecno .imgTecno {
+      width: 6vh; }
+  body .cajaGral main .cajaMain .salud {
     width: 60vh;
-    border: 3px solid green;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'Trebuchet';
-    font-size: 1.2rem;
-}
+    height: 30vh; }
+    body .cajaGral main .cajaMain .salud .imgEsc {
+      width: 6vh; }
 
-.imgEsc{
-    width: 6vh;
-}
-   
-.pie{
-    margin: 0.4rem;
-    color: rgb(79, 67, 146);
-    text-align: center;
-    padding: 5px;
-    font-size: 14px;
-    grid-area: footer;
-}
+body .cajaGral footer .pie {
+  margin: 0.4rem;
+  color: #4f4392;
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+  grid-area: footer; }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width: 600px) {
+  .cajaMain {
+    grid-template-areas: "eco mip" "tecno salud"; }
+    .cajaMain .eco {
+      width: 45vh;
+      height: 40vh;
+      grid-area: eco; }
+    .cajaMain .mip {
+      width: 45vh;
+      height: 40vh;
+      grid-area: mip; }
+    .cajaMain .tecno {
+      width: 45vh;
+      height: 40vh;
+      grid-area: tecno; }
+    .cajaMain .salud {
+      width: 45vh;
+      height: 40vh;
+      grid-area: salud; } }
 
-    body{
-        height: 180vh;
-    }
-    .cajaMain{
-        grid-template-areas:"eco mip"
-                            "tecno salud";
-    }
-    .eco{
-        height: 40vh;
-        width: 45vh;
-        grid-area: eco;
-    }
-    .mip{
-        height: 40vh;
-        width: 45vh;
-        grid-area: mip;
-    }
-    .tecno{
-        height: 40vh;
-        width: 45vh;
-        grid-area: tecno;
-    }
-    .salud{
-        height: 40vh;
-        width: 45vh;
-        grid-area: salud;
-    }
-}
-
-@media screen and (min-width:1024px)
-{
-    body{
-        height: 150vh;
-    }
-    .cajaMain{
-        grid-template-areas: "eco mip tecno salud";
-    }
-
-    .eco{
-        height: 50vh;
-        width: 38vh;
-        grid-area: eco;
-    }
-    .mip{
-        height: 50vh;
-        width: 38vh;
-        grid-area: mip;
-    }
-    .tecno{
-        height: 50vh;
-        width: 38vh;
-        grid-area: tecno;
-    }
-    .salud{
-        height: 50vh;
-        width: 38vh;
-        grid-area: salud;
-    }
-    
-}
-    
-
-
-/*EStilos de html QUIENES SOMOS*/
-
-
-
-.qsTitulo{
-    text-align: center;
-    font-size: 3rem;   
-}
-
-.qsSubt{
-    color: rgb(61, 29, 240);
-    text-align: center;
-    font-family: Trebuchet MS;
-    font-size: 1.6rem;
-    margin: 1rem;
-}
-.qsMain{
-    display: grid;
-    justify-content: center;
-    grid-template-areas: "qsP"
-                         "cajaImg"
-                         "descImg";
-}
-
-.qsP{
-    margin: 1rem;
-    padding: 0.8rem;
-    background-color: antiquewhite;
-    font-family: Trebuchet MS;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 3px solid green;
-    border-radius: 12px;
-    width: 80vh;
-    grid-area: qsP;
-    }
-
-h3{color: rgb(61, 29, 240);
-    margin: 20px;
-    font-weight: 12px;
-    text-align: center;
-    grid-area: descImg;
-}
-.cajaImg{
-    width: 85vh;
-    grid-area: cajaImg;
-}
-.img2{
-width: 75vh;
-height: auto;
-margin: auto;
-display: block;
-}
-
-@media screen and (min-width:1024px) 
-{
-    .qsMain{
-        grid-template-columns: 0,6fr 0,4fr;
-        grid-template-rows: 0,8fr 0,2fr;
-        grid-template-areas: "qsP cajaImg"
-                             "qsP descImg";
-    }
-    
-}
- 
-
-
-/*Estilos de html Servicios y Espacios*/
-
-.mainSyE{
-    display: grid;
-    justify-content: center;
-    grid-template-areas: "cajaServ"
-                         "cajaEsp"
-                         "cajaZonas";
-}
-
-.cajaServ{
-    margin: 1rem;
-    padding: 0.8rem;
-    background-color: antiquewhite;
-    font-family: Trebuchet MS;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 3px solid green;
-    border-radius: 12px;
-    width: 80vh;
-    grid-area: cajaServ;
-}
-
-.h1Serv{
-    font-family: Cochin;
-    font-size: 3rem;
-    margin: 10px;
-    padding: 10px;
-    color: rgb(235, 234, 241);
-}
-
-.cajaEsp{
-    margin: 1rem;
-    padding: 0.8rem;
-    background-color: antiquewhite;
-    font-family: Trebuchet MS;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 3px solid green;
-    border-radius: 12px;
-    width: 80vh;
-    grid-area: cajaEsp;
-}
-
-.h2SyE{
-    color: rgb(86, 86, 94);
-    text-align: center;
-    text-decoration: underline;
-}
-
-.ulSyE{
-    color: rgb(61, 29, 240);
-    margin: 20px;
-    padding: 25px;
-    font-family: Trebuchet MS;
-    font-size: 18px;
-}
-
-.cajaZonas{
-    margin: 1rem;
-    padding: 0.8rem;
-    background-color: antiquewhite;
-    font-family: Trebuchet MS;
-    font-weight: 600;
-    font-size: 1rem;
-    border: 3px solid green;
-    border-radius: 12px;
-    width: 80vh;
-    grid-area: cajaZonas;
-}
-
-h4{
-    text-align: center;
-    color: cornflowerblue;
-    font-size: 1.2rem;
-}
-
-@media screen and (min-width:1024px)
-{
-    .mainSyE{
-    grid-template-columns: 0,5fr 0,5fr;
-    grid-template-rows: 0,7fr 0,3fr;
-    grid-template-areas:"cajaServ cajaEsp"
-                        "cajaZonas cajaZonas";
-    }    
-    .cajaZonas{
-        width: auto;
-    }                  
-}
-    
-/*Estilos de Nuestros Trabajos*/
-
-.h1Nt{
-    font-size: 2rem;
-}
-
-
-.carrusel{
-    padding: 0.3rem;
-    margin: 0.3rem;
-    width: 45%;
-}
-
-.videos{
-    display: flex;
-    justify-items: normal;
-}
-
-.video1{
-    width: 100vh;
-}
-
-
-/*ESTILOS de html Contacto*/
-
-.cajaCont{
-    background: rgb(61,237,60);
-    background: linear-gradient(0deg, rgba(61,237,60,1) 0%, rgba(72,217,236,1) 100%);
-}
-
-.h1Contacto{
-    font-family: Calibri;
-    font-size: 42px;
-    margin: 20px;
-}
-
-form{
-    color: rgb(61, 29, 240);
-    font-size: 22px;
-}
-
-fieldset{
-    margin: 20px;
-    padding: 22px;
-}
-
-.nombre{
-    margin: 15px;
-}
-
-.tel{
-    margin: 15px;
-}
-
-.ubi{
-    margin: 15px;
-}
-
-.envRes{
-    margin: 15px;
-}
-
-
-
-
-
-
-
-
+@media screen and (min-width: 1020px) {
+  .cajaMain {
+    grid-template-areas: "eco mip tecno salud"; }
+    .cajaMain .eco {
+      width: 38vh;
+      height: 50vh;
+      grid-area: eco; }
+    .cajaMain .mip {
+      width: 38vh;
+      height: 50vh;
+      grid-area: mip; }
+    .cajaMain .tecno {
+      width: 38vh;
+      height: 50vh;
+      grid-area: tecno; }
+    .cajaMain .salud {
+      width: 38vh;
+      height: 50vh;
+      grid-area: salud; } }
