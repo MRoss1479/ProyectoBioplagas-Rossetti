@@ -17,100 +17,143 @@
             header{
                 .cajaHeader{
                     text-decoration: none;
-                    border: 2px solid black;
+                    background-color: $color-cuarto;
                     display: flex;
-                    justify-content: center;
-                    .mascara{
-                        width: 6%;
+                    justify-content: space-evenly;
+                    
+                    .logo{
+                        width: 12vh;
+                        height: 16vh;
                     }
                     .titulo{
                         margin: 0.5rem;
-                        color: $color-secundario;
+                        color: $color-segundo;
                         font-size: 4rem;
-                        -webkit-text-stroke: 0.1px whitesmoke;
+                        -webkit-text-stroke: 1px $color-tercero;
                         font-weight: 100px;
                         font-family: 'Fredoka One', cursive;
                         font-style: italic;
                         text-align: center;
                     }
-                }
-                .menu{
-                    padding: 0.2rem;
-                    .barra{
-                        display: flex;
-                        justify-content: space-evenly;
-                        margin: 0.3rem;
-                        li{
-                            list-style-type: none;
-                            margin: 0.5rem;
-                            padding: 0.5rem;
-                            font-family: $font-principal;
-                            font-size: 1.2rem;
-                            font-weight: 400;
-                            a{
-                            color: $color-principal;
-                            text-decoration: none;
-                            transform: scale(1.1);
-                            }
 
-                            :hover{
-                                border: 2px solid $color-secundario;
-                                transition: all .4s ease-in-out;
-                                
-                            }
-                        }
-
+                    .calidad{
+                        margin: 0.8rem;
+                        width: 12vh;
+                        height: 12vh;
+                        border-radius: 50px;
                     }
 
+                    
                 }
+
+                .menu{
+                    background-color: $color-tercero;
+                }
+                
+                
             }
             main{
                 .imagen{
                     width: 100%;
                     display: flex;
                     justify-content: center;
+                    margin: 1rem;
                     .img1{
-                        height: 50vh;
+                        width: 80%;
+                        height: auto;
                         display: block;
                     }
                 }
+                .botIma{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    width: 100%;
+                    height: 16vh;
+                    .botonInsta{
+                        .b-i{
+                            @include medidas (80%, 8vh);
+                            margin-top: 0.8rem;
+                            }
+                            :hover{
+                                transform: scale(1.1);
+                                transition: all .4s ease-in-out;
+                        }
+                    }
+                    .comu{
+                        font-family: 'Gill Sans MT';
+                        font-size: 2rem;
+                        font-weight: 500;
+                        color: $color-tercero;
+                        margin: 1rem;
+                        text-align: center;
+                    }
+                    .botonWsp{
+                        .b-w{
+                            @include medidas (80%, 8vh);
+                            margin-top: 0.8rem;
+                            }
+                            :hover{
+                                transform: scale(1.1);
+                                transition: all .4s ease-in-out;
+                            }
+                    }
+                    
+                }
+
                 .cajaMain{
                     @include grid;
+                    grid-template-areas:"eco"
+                                        "mip" 
+                                        "tecno"
+                                        "salud";
+
+                    margin-top: 25vh;
                     .eco{
                         @extend %cajitas;
-                        @include medidas (60vh, 30vh);
+                        @include medidas (45vh, 35vh);
                         .imgEco{
                             width: $medida-logo;
                         }
+                        font-size: 1rem;
+                        grid-area: eco;
                     }
                     .mip{
                         @extend %cajitas;
-                        @include medidas (60vh, 30vh);
+                        @include medidas (45vh, 35vh);
                         .imgMip{
                             width: $medida-logo;
                         }
+                        font-size: 1rem;
+                        grid-area: mip;
                     }
                     .tecno{
                         @extend %cajitas;
-                        @include medidas (60vh, 30vh);
+                        @include medidas (45vh, 35vh);
                         .imgTecno{
                             width: $medida-logo;
                         }
+                        font-size: 1rem;
+                        grid-area: tecno
                     }
                     .salud{
                         @extend %cajitas;
-                        @include medidas (60vh, 30vh);
+                        @include medidas (45vh, 35vh);
                         .imgEsc{
                             width: $medida-logo;
                         }
+                        font-size: 1rem;
+                        grid-area: salud;
                     }
                 }
 
             }
             footer{
                 .pie{
+                    background-color: $color-tercero;
                     margin: 0.4rem;
-                    color: $color-principal;
+                    color: $color-segundo;
                     text-align: center;
                     padding: 0.3rem;
                     font-size: 1rem;
@@ -121,49 +164,345 @@
     }
 
 
-@media screen and (min-width:600px) {
-    .cajaMain{
+@media screen and (min-width: 600px){
+    body .cajaGral main .cajaMain{
+    
         grid-template-areas: "eco mip"
                              "tecno salud";
+        margin-top: 5vh;
                             
         .eco{
-            @include medidas (45vh, 40vh);
-            grid-area: eco;
+            @include medidas (42vh, 46vh);
+            font-size: 1.2rem
             }
         .mip{
-            @include medidas (45vh, 40vh);
-            grid-area: mip;
+            @include medidas (42vh, 46vh);
+            font-size: 1.2rem
         }
         .tecno{
-            @include medidas (45vh, 40vh);
-            grid-area: tecno;
+            @include medidas (42vh, 46vh);
+            font-size: 1.2rem
         }
         .salud{
-            @include medidas (45vh, 40vh);
-            grid-area: salud;
+            @include medidas (42vh, 46vh);
+            font-size: 1.2rem
         }
     }
 }
 
 @media screen and (min-width:1020px){
-    .cajaMain{
+    body .cajaGral main .cajaMain{
         grid-template-areas: "eco mip tecno salud";
 
         .eco{
-            @include medidas (38vh, 50vh);
+            @include medidas (38vh, 56vh);
             grid-area: eco;
             }
         .mip{
-            @include medidas (38vh, 50vh);
+            @include medidas (38vh, 56vh);
             grid-area: mip;
         }
         .tecno{
-            @include medidas (38vh, 50vh);
+            @include medidas (38vh, 56vh);
             grid-area: tecno;
         }
         .salud{
-            @include medidas (38vh, 50vh);
+            @include medidas (38vh, 56vh);
             grid-area: salud;
         }
     }
 }
+
+/* ESTILO QUIENES SOMOS */
+
+.qsSubtitulo{
+    font-family: Haettenschweiler;
+    text-transform: uppercase;
+    color: cadetblue;
+    text-align: center;
+    margin: 10px;
+
+}
+
+main{
+    .cajaQs{
+        @include grid;
+        grid-template-areas: "qsP"
+                            "cajaImg"
+                            "descripcion";
+        @include medidas (100%, auto);               
+
+        
+        .qsP{
+            @include medidas (95%, auto);
+            border: 3px solid $color-tercero;
+            border-radius: 1rem;
+            margin: 1rem;
+            padding: 1rem;
+            font-family: $font-principal;
+            font-size: 1.2rem;
+            background-color: $color-primero;
+            grid-area: qsP;
+            }
+        .cajaImg{
+            @include medidas (95%, auto);
+            margin: 1rem;
+            grid-area: cajaImg;
+            .img2{
+                @include medidas (95%, 90%);
+            }
+        }
+        .descImg{
+            font-family: 'Segoe UI';
+            background-color: $color-primero;
+            color:rgb(70, 116, 117);
+            font-size: 1rem;
+            grid-area: descripcion;
+        }
+
+        .cajaImgParque{
+            @include medidas (95%, auto);
+            display: none;
+            .imgPq{
+                @include medidas (100%, 90%)
+            }
+
+        }
+        
+    }
+}
+
+@media screen and (min-width:600px){
+
+    main .cajaQs .qsP{
+        @include medidas (600px, 145vh);
+
+    }   
+}
+
+@media  screen and (min-width:1020px){
+
+    main .cajaQs{
+        @include medidas (100%, auto);
+        margin: 0.5rem;
+        row-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1,9fr 0,2fr 1,9fr; 
+        grid-template-areas: "qsP cajaImg"
+                             "qsP descripcion"
+                             "qsP imgParque";
+                            }
+
+    main .cajaQs .qsp{
+        @include medidas (50%, auto);
+    }
+
+    main .cajaQs .cajaImg{
+        @include medidas (85%, auto);
+    }
+        
+    main .cajaQs .cajaImgParque{
+            @include medidas (85%, auto);
+            margin: 0.5rem;
+            display: block;
+            grid-area: imgParque;
+            }
+            
+        }
+
+/* Estilos Servicios y Espacios*/
+
+.cajaGral{
+    header{
+        .h2Serv{
+        font-family: Haettenschweiler;
+        text-align: center;
+        font-size: 2rem;
+        color:cadetblue;
+        text-decoration: underline;
+        }
+    }
+    main{
+        .cajaSyE{
+            
+            @include grid;
+            grid-template-rows: 1,3fr 1,3fr 0,4fr;
+            grid-template-areas: "servicios"
+                                "espacios"
+                                "zonas";
+            
+            .servicios{
+                @extend %cajitas;
+                @include medidas (60vh, 70vh);
+                font-size: 1.5rem;
+                font-weight: 700;
+                grid-area: servicios;
+                .h3SyE{
+                    font-size: 1.8rem;
+                    font-style: oblique;
+                }
+                .ulSyE{
+                    list-style-type: none;
+                }
+            }
+            .espacios{
+                @extend %cajitas;
+                @include medidas (60vh, 70vh);
+                font-size: 1.5rem;
+                font-weight: 700;
+                grid-area: espacios;
+                .h3SyE{
+                    font-size: 1.8rem;
+                    font-style: oblique;
+                }
+                .ulSyE{
+                    list-style-type: none;
+                }
+
+            }
+            .zonas{
+                @extend %cajitas;
+                @include medidas (60vh, 30vh);
+                grid-area: zonas;
+                .h4SyE{
+                    font-family: $font-principal;
+                    font-weight: 600;
+                    color: cadetblue;
+                }
+
+            }
+        
+
+        }
+
+    }
+}
+
+@media  screen and (min-width:600px){
+    .cajaGral main .cajaSyE{
+        grid-template-rows: 1,7fr 0,3fr;
+        grid-template-areas:"servicios espacios" 
+                            "zonas zonas";
+
+        .zonas{
+            @include medidas (120vh, 20vh);
+        }
+    }
+}
+
+@media  screen and (min-width:1020px){
+    .cajaGral main .cajaSyE{
+
+        grid-template-rows: 1,7fr 0,3fr;
+        grid-template-areas:"servicios espacios" 
+                            "zonas zonas";
+                    
+        .servicios{
+            @include medidas (75vh, 70vh);
+        }
+        .espacios{
+            @include medidas (75vh, 70vh);
+        }
+        .zonas{
+            @include medidas (160vh, 20vh);
+        }
+    }
+    
+}
+
+/*Estilos Nuestros Trabajos*/
+
+.h2nt{
+    font-family: Haettenschweiler;
+    font-size: 2.5rem;
+    color: cadetblue;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.carrusel{
+    padding: 1rem;
+    margin: 1rem;
+    width: 55%;
+}
+
+.videos{
+    margin-left: 3rem;
+}
+
+/* Estilos contacto*/
+
+.cajaContacto{
+    margin: 1rem;
+    padding: 1.4rem;
+    background-color: $color-cuarto;
+    legend{
+        color: cadetblue;
+        font-size: 2rem;
+        font-family: $font-principal;
+    }
+    form{
+        color: cadetblue;
+        font-size: 22px;
+    }
+    .nombre{
+        margin: 15px;
+    }
+
+    .tel{
+     margin: 15px;
+    }
+
+    .ubi{
+        margin: 15px;
+    }
+
+    .envRes{
+        margin: 15px;
+        :hover{
+            transform: scale(1.1);
+            transition: all .4s ease-in-out;
+        }
+        .botonEnviar{
+            padding: 5px;
+            margin: 5px;
+            color: cadetblue;
+            font-weight: 500;
+            
+            }
+        
+        .botonReset{
+            padding: 5px;
+            margin: 5px;
+            color: cadetblue;
+            font-weight: 500;
+            
+            }
+     }
+    
+}
+
+.datos{
+    margin: 1rem;
+    padding: 1.4rem;
+    background-color: $color-cuarto;
+    font-family: $font-principal;
+    font-size: 1.2rem;
+    color: cadetblue;
+    font-weight: 600;
+}
+
+
+
+            
+                
+
+
+    
+
+
+
+
+      
+
